@@ -7,7 +7,10 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "android-run-debug-develop": "react-native run-android --no-jetifier --variant=devDebug --appId 'com.apps.base.dev'",
+    "android-run-debug-staging": "react-native run-android --no-jetifier --variant=stagingDebug --appId 'com.apps.base.staging'",
+    "android-run-debug-product": "react-native run-android --no-jetifier --variant=productDebug --appId 'com.apps.base.dev'"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.16.1",
@@ -16,6 +19,7 @@
     "@types/react-redux": "^7.1.22",
     "react": "17.0.2",
     "react-native": "0.67.3",
+    "react-native-config": "^1.4.5",
     "react-native-safe-area-context": "^4.0.1",
     "react-native-screens": "^3.12.0",
     "react-redux": "^7.2.6",
