@@ -23,7 +23,7 @@
                     ".json"
                 ],
                 "alias": {
-                    "export": "./src/export",
+                    
                 }
             }
         ]
