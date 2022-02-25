@@ -8,12 +8,14 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import Navigation from './src/navigation/scene/RootScenes';
 
 const App = () => {
     return (
-        <View style={styles.container}>
-            <Text>Welcome</Text>
-        </View>
+        <NavigationContainer>
+            <Navigation />
+        </NavigationContainer>
     );
 };
 
