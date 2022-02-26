@@ -90,6 +90,7 @@ project.ext.react = [
 
 apply from: "../../node_modules/react-native/react.gradle"
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -202,16 +203,19 @@ android {
         dev {
             dimension "enviroment"
             resValue "string", "app_name", project.env.get("APP_NAME")
+            resValue "string", "CodePushDeploymentKey", project.env.get("CODEPUSH_ANDROID_DEVELOPMENT_KEY")
             signingConfig signingConfigs.debug
         }
         staging {
             dimension "enviroment"
             resValue "string", "app_name", project.env.get("APP_NAME")
+            resValue "string", "CodePushDeploymentKey", project.env.get("CODEPUSH_ANDROID_DEVELOPMENT_KEY")
             signingConfig signingConfigs.staging
         }
         product {
             dimension "enviroment"
             resValue "string", "app_name", project.env.get("APP_NAME")
+            resValue "string", "CodePushDeploymentKey", project.env.get("CODEPUSH_ANDROID_DEVELOPMENT_KEY")
             signingConfig signingConfigs.product
         }
     }
